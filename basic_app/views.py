@@ -26,8 +26,8 @@ def user_logout(request):
 
 
 @login_required
-def delete(request, username):
-    User.objects.filter(username=username).delete()
+def delete(request, id):
+    User.objects.filter(id=id).delete()
     return HttpResponseRedirect(reverse('index'))
 
 
